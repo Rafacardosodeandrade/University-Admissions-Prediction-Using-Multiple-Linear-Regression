@@ -37,3 +37,18 @@ admission_df.drop('Serial No.' , axis = 1, inplace = True)
 admission_df
 
 
+#############################################################
+#Task3: Perform Exploratory Data Analysis
+
+# checking the null values
+admission_df.isnull().sum()
+
+# check the dataframe information
+admission_df.info()
+
+# statistical summary of the dataframe
+admission_df.describe()
+
+# grouping by University ranking
+df_university = admission_df.groupby(by = 'University Rating').mean()
+df_university
