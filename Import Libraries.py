@@ -16,6 +16,9 @@
 # OUTPUTS:
 # - Chance of admission (ranging from 0 to 1)
 
+###########################################################
+
+#Task 2 - Import Libraries and Dataset
 
 import pandas as pd 
 import numpy as np 
@@ -23,4 +26,14 @@ import seaborn as sns
 import matplotlib.pyplot as plt 
 from jupyterthemes import jtplot
 jtplot.style(theme='monokai' , context='notebook' , ticks=True, grid=False)
+
+# read the csv file
+
+admission_df = pd.read_csv('Admission_Predict.csv')
+admission_df.head()
+
+# Let's drop the serial no.
+admission_df.drop('Serial No.' , axis = 1, inplace = True)
+admission_df
+
 
