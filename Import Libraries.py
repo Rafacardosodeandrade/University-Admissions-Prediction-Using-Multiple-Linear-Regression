@@ -56,6 +56,16 @@ df_university
 #############################################################
 #Task4: Perform Data Visualization
 
-admission_df.hist(bins = 30, figsize = (20, 20), color = 'r') #matplotlib visualizations
+#matplotlib visualizations
+admission_df.hist(bins = 30, figsize = (20, 20), color = 'r') 
 
-sns.pairplot(admission_df) #pairplot using seaborn
+#pairplot using seaborn
+sns.pairplot(admission_df) 
+
+#plot correlations heatmap - VERY INTERSTING
+corr_matrix = admission_df.corr()
+plt.figure(figsize = (12, 12))
+sns.heatmap(corr_matrix, annot = True)
+plt.show()
+
+
