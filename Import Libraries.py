@@ -52,3 +52,8 @@ admission_df.describe()
 # grouping by University ranking
 df_university = admission_df.groupby(by = 'University Rating').mean()
 df_university
+
+#############################################################
+#Task4: Perform Data Visualization
+
+admission_df.hist(bins = 30, figsize = (20, 20), color = 'r') #matplotlib visualizations
