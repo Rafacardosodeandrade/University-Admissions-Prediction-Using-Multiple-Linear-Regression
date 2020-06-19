@@ -57,3 +57,5 @@ df_university
 #Task4: Perform Data Visualization
 
 admission_df.hist(bins = 30, figsize = (20, 20), color = 'r') #matplotlib visualizations
+
+sns.pairplot(admission_df) #pairplot using seaborn
