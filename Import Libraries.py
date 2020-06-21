@@ -80,4 +80,10 @@ y = np.array(y)
 y = y.reshape(-1,1)
 y.shape
 
+#scaling the data before training the model
+from sklearn.preprocessing import StandardScaler, MinMaxScaler
+scaler_x = StandardScaler()
+x = scaler_x.fit_transform(x)
+
+
 
