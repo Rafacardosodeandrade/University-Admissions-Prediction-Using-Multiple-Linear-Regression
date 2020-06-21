@@ -69,4 +69,13 @@ sns.heatmap(corr_matrix, annot = True)
 plt.show()
 
 #Task #5: Create Training and Testing Dataset
+admission_df.columns
+X = admission_df.drop(columns = ['Chance of Admit'])
+y = admission_df['Chance of Admit']
+X.shape
+Y.shape
+y 
+x = np.array(x)
+y = np.array(y)
+
 
