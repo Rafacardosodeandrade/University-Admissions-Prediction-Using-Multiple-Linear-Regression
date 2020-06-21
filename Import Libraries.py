@@ -70,12 +70,14 @@ plt.show()
 
 #Task #5: Create Training and Testing Dataset
 admission_df.columns
-X = admission_df.drop(columns = ['Chance of Admit'])
+x = admission_df.drop(columns = ['Chance of Admit'])
 y = admission_df['Chance of Admit']
-X.shape
-Y.shape
+x.shape
+y.shape
 y 
 x = np.array(x)
 y = np.array(y)
+y = y.reshape(-1,1)
+y.shape
 
 
