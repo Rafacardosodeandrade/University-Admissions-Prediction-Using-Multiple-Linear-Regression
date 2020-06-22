@@ -104,3 +104,9 @@ accuracy_LinearRegression = LinearRegression_model.score(x_test, y_test)
 accuracy_LinearRegression
 
 #Task 7: Train and Evaluate an Artificial Neural Network
+
+import tensorflow as tf 
+from tensorflow import keras 
+from tensorflow.keras.layers import Dense, Activation, Dropout
+from tensorflow.keras.optimizers import Adam
+
