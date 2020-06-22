@@ -138,4 +138,17 @@ plt.legend(['Training Loss'])
 
 #Task#8: Train and Evaluate a decision tree and random forest models
 
+from sklearn.tree import DecisionTreeRegressor
+DecisionTree_model = DecisionTreeRegressor()
+DecisionTree_model.fit(x_train, y_train)
+
+accuracy_DecisionTree = DecisionTree_model.score(x_test, y_test)
+accuracy_DecisionTree
+
+from sklearn.ensemble import RandomForestRegressor
+RandomForest_model = RandomForestRegressor(n_estimators=100, max_depth = 10)
+RandomForest_model.fit(x_train, y_train)
+
+accuracy_RandomForest = RandomForest_model.score(x_test, y_test)
+accuracy_RandomForest
 
