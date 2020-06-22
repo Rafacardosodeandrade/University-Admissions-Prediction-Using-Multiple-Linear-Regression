@@ -125,5 +125,15 @@ ANN_model.add(Dense(1))
 ANN_model.compile(loss = 'mse', optimizer = 'adam')
 ANN_model.summary()
 
+ANN_model.compile(optimizer = 'Adam' , loss = 'mean_squared_error')
+epochs_hist = ANN_model.fit(x_train, y_train, epochs = 100, batch_size = 20)
+
+epochs_hist.history.keys()
+
+plt.plot(epochs_hist.history['loss'])
+plt.title('Model Loss Progress During')
+plt.xlabel('Epoch')
+plt.ylabel('Training Loss')
+plt.legend(['Training Loss'])
 
 
