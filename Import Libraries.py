@@ -102,3 +102,5 @@ LinearRegression_model.fit(x_train, y_train)
 
 accuracy_LinearRegression = LinearRegression_model.score(x_test, y_test)
 accuracy_LinearRegression
+
+#Task 7: Train and Evaluate an Artificial Neural Network
