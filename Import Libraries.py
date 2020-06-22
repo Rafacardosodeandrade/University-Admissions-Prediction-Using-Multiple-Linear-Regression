@@ -110,3 +110,20 @@ from tensorflow import keras
 from tensorflow.keras.layers import Dense, Activation, Dropout
 from tensorflow.keras.optimizers import Adam
 
+ANN_model = keras.Sequential()
+ANN_model.add(Dense(50, input_dim = 7))
+ANN_model.add(Activation('relu'))
+ANN_model.add(Dense(150))
+ANN_model.add(Activation('relu'))
+ANN_model.add(Dropout(0.5))
+ANN_model.add(Dense(150))
+ANN_model.add(Activation('relu'))
+ANN_model.add(Dropout(0.5))
+ANN_model.add(Dense(50))
+ANN_model.add(Activation('linear'))
+ANN_model.add(Dense(1))
+ANN_model.compile(loss = 'mse', optimizer = 'adam')
+ANN_model.summary()
+
+
+
