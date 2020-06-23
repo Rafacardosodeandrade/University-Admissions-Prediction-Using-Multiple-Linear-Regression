@@ -152,3 +152,30 @@ RandomForest_model.fit(x_train, y_train)
 accuracy_RandomForest = RandomForest_model.score(x_test, y_test)
 accuracy_RandomForest
 
+#Task9 - KPIS explain
+
+#Task#10 - Calculate Regression Model KPIS.
+y_predict = LinearRegression_model.predict(x_test)
+plt.plot(y_test, y_predict, '^', color = 'r')
+
+y_predict_orig = scaler_y.inverse_transform(y_predict)
+y_test_orig = scaler_y.inverse_transform(y_test)
+
+plt.plot(y_test_orig, y_predict_orig, '^', color = 'r')
+
+k = x_test.shape[1]
+n = len(x_test)
+n
+
+from sklear.metrics import r2_score, mean_squared_error, mean_absolute_error
+from math import sqrt
+
+RMSE = float(format(np.sqrt(mean_squared_error(y_test_orig, y_predict_orig)),'.3f'))
+MSE = mean_squared_error(y_test_orig, y_predict_orig)
+MAE = mean_absolute_error(y_test_orig, y_predict_orig)
+r2 = r2_score(y_test_orig, y_predict_orig)
+adj_r2 = 1-(1-r2)*(n-1)/(n-k-1)
+
+print('RMSE =',RMSE, '\nMSE =', MSE, '\nMAE =', MAE, '\nR2 =', r2, 'nAdjusted R2 =' , adj_r2)
+
+
